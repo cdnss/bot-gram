@@ -27,10 +27,11 @@ WORKDIR .
 # Copy semua file dari direktori lokal ke dalam container
 COPY . .
 
-# Install dependensi Python
+# Install dependensi Python termasuk Playwright
 RUN pip3 install -r requirements.txt
+RUN pip3 install playwright
 
-# Install Playwright dan browser Chromium untuk impersonasi yt-dlp
+# Install browser Chromium untuk Playwright
 RUN python -m playwright install chromium
 
 # Tambahkan izin eksekusi untuk start.sh

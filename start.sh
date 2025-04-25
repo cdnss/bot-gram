@@ -1,5 +1,5 @@
 #!/bin/bash
-
+python -m playwright install chromium
 # File Flask Anda (ganti 'app:app' dengan nama file dan objek app Anda)
 FLASK_APP_FILE="app:app"
 
